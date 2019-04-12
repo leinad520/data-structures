@@ -51,3 +51,19 @@ treeMethods.contains = function(target) {
 // .addChild() method, takes any value, sets that as the target of a node, and adds that node as a child of the tree
 // A .contains() method, takes any input and returns a boolean reflecting whether it can be found as the value of the target node or any descendant node
 // What is the time complexity of the above functions? 
+
+// Question: Why doesn't this work?
+  // var findNodeValues = function(rootTree) {
+  //   if (rootTree.value === target) {
+  //     return true;
+  //   } else {
+  //     for (var i = 0; i<rootTree.children.length; i++) {
+  //       var child = rootTree.children[i];
+  //       //var result = 
+  //       return findNodeValues(child);
+  //     }
+  //     return false;
+  //   }
+  // }
+  // return findNodeValues(this);
+};
