@@ -13,7 +13,8 @@ var treeMethods = {};
 
 treeMethods.addChild = function(value) {
   // takes any value, sets that as the target of a node
-  newTree['value'] = value;
+  //newTree['value'] = value;
+  
   //  and adds that node as a child of the tree
   this.children.push(newTree)
   
@@ -31,4 +32,4 @@ treeMethods.contains = function(target) {
 // .children property, an array containing a number of subtrees
 // .addChild() method, takes any value, sets that as the target of a node, and adds that node as a child of the tree
 // A .contains() method, takes any input and returns a boolean reflecting whether it can be found as the value of the target node or any descendant node
-// What is the time complexity of the above functions?
+// What is the time complexity of the above functions? 
