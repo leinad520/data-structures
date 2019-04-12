@@ -28,15 +28,21 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
-    function helperFunc(x) {
-      if (x.value === target){
+    function helperFunc(node) {
+      if (node === null) return false;
+      if (node.value === target){
         return true;
-      } else if (x.node !== null) {
-        x = x.next;
-         helperFunc(x);
-      }
-    } 
+      } 
+      //if (node.next === null) {
+        //return false;
+      //}
+      node = node.next;
+      return helperFunc(node);
+    }
     return helperFunc(list.head);
+  
+  // check if the head contains the target
+  //  return true
   };
 
   return list;
