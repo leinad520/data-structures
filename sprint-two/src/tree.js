@@ -66,4 +66,4 @@ treeMethods.contains = function(target) {
   //   }
   // }
   // return findNodeValues(this);
-};
+// };
