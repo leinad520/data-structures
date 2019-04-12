@@ -1,19 +1,23 @@
-var Tree = function(value) {
-  var newTree = {};
+var Tree = function(value) { 
+  // declare new node called newTree
+  var newTree = {}; 
+  // each node has a property of value
   newTree.value = value;
 
-  // your code here
-  newTree.children = [];  // fix me
+  // each node has property of children
+  newTree.children = [];  
   _.extend(newTree, treeMethods);
 
   return newTree;
 };
 
+// Store the methods in an object to use the functional shared method
 var treeMethods = {};
 
 treeMethods.addChild = function(value) {
   // takes any value, sets that as the target of a node
-  //newTree['value'] = value;
+  // Create a new tree node, and add it as a child of node with children array and value
+  var newTree /*target of a node*/ = Tree(value)// any value;
   
   //  and adds that node as a child of the tree
   this.children.push(newTree)
@@ -21,6 +25,20 @@ treeMethods.addChild = function(value) {
 };
 
 treeMethods.contains = function(target) {
+  // Declare a helper function which checks if the value of any of the nodes is equal to the target
+  var findNodeValues = function(rootTree) {
+    if (rootTree.value === target) {
+      return true;
+    } else {
+      for (var i = 0; i<rootTree.children.length; i++) {
+        var child = rootTree.children[i];
+        var result = findNodeValues(child);
+        if (result === true) return true;
+      }
+      return false;
+    }
+  }
+  return findNodeValues(this);
 };
 
 
