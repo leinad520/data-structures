@@ -31,4 +31,4 @@ setPrototype.remove = function(item) {
 // What is the time complexity of the above functions?
 // Note: Sets should not use up any more space than necessary. Once a value is added to a set, adding it a second time should not increase the size of the set.
 // Note: Until the advanced section, your sets should handle only string values.
-// Note: This is a rather simple data structure. Take a look at the Wikipedia entry. Which native Javascript type fits the requirements best?
+//  Note: This is a rather simple data structure. Take a look at the Wikipedia entry. Which native Javascript type fits the requirements best?
