@@ -25,16 +25,25 @@ Graph.prototype.contains = function(node) {
 
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
+  //to remove a node, we want to access the nodes array
   for (var i = 0; i < this.nodes.length; i++){
     if (this.nodes[i] === node){
+      // and remove it, which splice does
       this.nodes.splice(i, 1);
     }
   }
-  delete this.edges[node];
+  //now we want to remove the edges connected to that node. how?
+  //first, delete the whole array that has the key of deleted node
   
-  for (var key in edges) {
-    if (edges[key].includes(node)) {
-      edges[key].splice(edges[key].indexOf(node), 1)
+  
+  delete this.edges[node];
+  //second, loop through the array of all the keys that had deleted node as an edge and 
+  
+
+  for (var key in this.edges) {
+    if (this.edges[key].includes(node)) {
+      // third,delete the node from the array
+      this.edges[key].splice(this.edges[key].indexOf(node), 1)
     }
   }
   
