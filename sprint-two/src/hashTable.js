@@ -16,7 +16,14 @@ HashTable.prototype.insert = function(k, v) {
 
 HashTable.prototype.retrieve = function(k) {
   var index = getIndexBelowMaxForKey(k, this._limit);
-  // 
+  // get access to the index
+  var bucket = this._storage.get(index);
+  for (var i = 0; i<bucket.length; i++) {
+    if (bucket[i][0] === k) return bucket[i][1];
+  }
+  // loop through the array
+  // check if target key is equal to index 0 of inner array
+  // if so, return index 1 of inner array
 };
 
 
