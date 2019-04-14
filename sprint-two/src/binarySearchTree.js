@@ -28,6 +28,7 @@ treeMethods.insert = function(val) {
   } else {
     return 'error';
   }
+   
   
 
 
